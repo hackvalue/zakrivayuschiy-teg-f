@@ -116,7 +116,7 @@
 
 .theme-menu__button::after {
   content: "";
-  outline: 1px solid var(--main-color, #000);
+  outline: 1px solid var(--accent-color, #000);
   display: block;
   scale: 0;
   transform-origin: 0;
@@ -144,19 +144,16 @@
 
 .card__cover {
   position: relative;
+  border-block-start: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
+  display: flex;
 }
-
-
 
 .card__cover-image {
   width: 100%;
-  height: 100%;
+  object-fit: cover;
   object-position: center;
   aspect-ratio: 1 / 1;
-  border-block-start: 2px solid var(--accent-color);
-  border-block-end: 2px solid var(--accent-color);
-  
-  
 }
 
 .cover__label {
@@ -164,30 +161,26 @@
   font-size: 0.875rem;
   font-variation-settings: var(--wght-title);
   position: absolute;
-  inset-block-start: 27px;
+  inset-block-start: 25px;
   inset-inline-end: 25px;
   color: var(--accent-color);
-  mix-blend-mode: hard-light;
-  text-shadow: 1px 0 var(--bg-color);
+  text-shadow: 1px 1px var(--bg-color);
   opacity: 50%;
 }
 
 .card__title {
-  
-  padding: 4.75px 10px;
+  padding: 5px 10px;
   font-size: 1.125rem;
   line-height: 21px;
   font-variation-settings: var(--wght-title);
-  
 }
 
 .card__description {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 25px;
+  padding: 25px 27px;
   line-height: 21px;
-  
 }
 
 .buttons {
@@ -215,6 +208,7 @@
 /*SAVE*/
 
 .save {
+  margin-block-start: 50px;
   margin-block-end: 103px;
 }
 
@@ -222,9 +216,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  flex-basis: 30px;
-  flex-grow: 1;
   gap: 8px;
   background-color: var(--bg-color);
   margin: 0 auto;
@@ -238,13 +229,10 @@
 }
 
 @media (width<=375px) {
-
-.cover__label {
-  inset-block-start: 25px;
-  inset-inline-end: 11px;
-
-}
-
+  .cover__label {
+    inset-block-start: 23px;
+    inset-inline-end: 11px;
+  }
 
   .save__button {
     flex-direction: column;
@@ -268,8 +256,38 @@
   .cover__label {
     -webkit-text-stroke: 1px var(--bg-color);
     text-stroke: 1px var(--bg-color);
-    text-stroke: none;
+    text-shadow: none;
   }
 }
 
+.image-walls {
+  filter: hue-rotate(90deg);
+}
 
+.image-start {
+  filter: grayscale(52%);
+}
+
+.image-doubt {
+  filter: hue-rotate(10deg);
+}
+
+.image-ideal {
+  filter: blur(0.06rem);
+}
+
+.image-hands {
+  filter: hue-rotate(90deg) blur(1px);
+}
+
+.image-perspective {
+  filter: hue-rotate(90deg) blur(1px);
+}
+
+.image-camels {
+  filter: hue-rotate(90deg) blur(1px);
+}
+
+.image-herenow {
+  filter: hue-rotate(90deg) blur(1px);
+}
