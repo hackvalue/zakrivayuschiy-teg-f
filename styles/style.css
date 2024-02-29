@@ -41,8 +41,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  margin-block-start: 100px;
-  margin-inline: auto;
+  margin: 100px auto;
 
   block-size: clamp(20.438rem, 3.85vw + 19.535rem, 23rem);
 }
@@ -138,33 +137,34 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  margin-block-start: 100px;
   font-size: 18px;
-
   font-family: var(--main-font);
   color: var(--accent-color);
 }
 
 .card__cover {
   position: relative;
-  block-size: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
 }
 
-.cover__image img {
+
+
+.card__cover-image {
   width: 100%;
-  min-height: 100%;
-  object-fit: cover;
+  height: 100%;
   object-position: center;
   aspect-ratio: 1 / 1;
+  border-block-start: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
+  
+  
 }
 
 .cover__label {
   font-family: var(--accent-font);
   font-size: 0.875rem;
-  font-variation-settings: var(--wght-title), 700;
+  font-variation-settings: var(--wght-title);
   position: absolute;
-  inset-block-start: 25px;
+  inset-block-start: 27px;
   inset-inline-end: 25px;
   color: var(--accent-color);
   mix-blend-mode: hard-light;
@@ -173,21 +173,21 @@
 }
 
 .card__title {
-  justify-self: start;
-  padding: 5px 10px;
-  font-size: 18px;
-  line-height: 21.78px;
+  
+  padding: 4.75px 10px;
+  font-size: 1.125rem;
+  line-height: 21px;
   font-variation-settings: var(--wght-title);
-  border-block-end: 2px solid var(--accent-color);
+  
 }
 
 .card__description {
   display: flex;
   flex-direction: column;
-  padding: 25px;
   gap: 27px;
-  border-block-start: 2px solid var(--accent-color);
+  padding: 25px;
   line-height: 21px;
+  
 }
 
 .buttons {
@@ -238,8 +238,21 @@
 }
 
 @media (width<=375px) {
+
+.cover__label {
+  inset-block-start: 25px;
+  inset-inline-end: 11px;
+
+}
+
+
   .save__button {
     flex-direction: column;
+  }
+
+  .card__description {
+    gap: 27x;
+    padding: 25px;
   }
 
   .floppy-icon {
@@ -259,6 +272,4 @@
   }
 }
 
-.image-start {
-  filter: saturate(150%) hue-rotate(-90deg);
-}
+
