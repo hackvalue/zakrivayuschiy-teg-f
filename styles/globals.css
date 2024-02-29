@@ -30,7 +30,6 @@ a {
   color: inherit;
 }
 
-button,
 input {
   color: currentColor;
   font-family: inherit;
@@ -50,4 +49,15 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+button {
+  border: none;
+  color: currentColor;
+  font-family: var(--accent-font);
+  font-size: 0.875rem;
+  line-height: 12.6px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
 }
