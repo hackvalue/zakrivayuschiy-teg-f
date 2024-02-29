@@ -52,7 +52,7 @@ ol {
 }
 
 button {
-  border: none;
+  outline: none;
   color: currentColor;
   font-family: var(--accent-font);
   font-size: 0.875rem;

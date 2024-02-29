@@ -114,17 +114,63 @@
         </svg>
       </button>
 
-      <button class="card__like-button">
+      <button class="buttons card__like-button">
         <span class="button__text">Like</span>
       </button>
     </div>
+ </article>
 
 
 
 
+
+
+
+   
+
+
+
+
+<section class="save">
+  <button
+        class="buttons save__button"
+        type="button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+      >
         
-      </article>
-    </main>
+      <svg class="floppy-icon" viewBox="0 0 40 40">
+        <use href="./svg/floppy.svg#floppy">
+      </svg>
+      <span>
+        Сохранить на память
+        </span>
+
+      </button>
+
+
+
+      <div>
+        <dialog class="pop-up-window" id="dialog-id">
+          <svg class="floppy-img" viewBox="0 0 21 21">
+            <use href="/svg/floppy.svg#floppy"></use>
+          </svg>
+
+          <h3 class="pop-up-title">Вставьте дискету, чтобы продолжить</h3>
+          <form method="dialog" class="close-form">
+            <button class="button close-button animated-button">ок</button>
+          </form>
+        </dialog>
+      </div>
+  
+    </section>
+
+  </main>
+
+
+
+
+
 
     <script src="./scripts/like.js"></script>
   </body>
