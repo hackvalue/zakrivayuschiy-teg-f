@@ -42,8 +42,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   margin: 100px auto;
-
-  block-size: clamp(20.438rem, 3.85vw + 19.535rem, 23rem);
+  
 }
 
 .header__logo {
@@ -67,7 +66,7 @@
   font-size: 0.875rem;
   font-family: var(--accent-font);
   color: var(--accent-color);
-  margin-block: 25px;
+  padding-block: 25px;
 }
 
 .theme-menu__button {
@@ -79,7 +78,7 @@
 
 .theme-menu__list {
   display: grid;
-  gap: 0.875rem;
+  gap: 12px;
   padding-inline-start: 17px;
 }
 
@@ -135,8 +134,7 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   font-size: 18px;
   font-family: var(--main-font);
   color: var(--accent-color);
@@ -147,10 +145,11 @@
   border-block-start: 2px solid var(--accent-color);
   border-block-end: 2px solid var(--accent-color);
   display: flex;
+
 }
 
 .card__cover-image {
-  width: 100%;
+  inline-size: 100%;
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1 / 1;
@@ -175,13 +174,38 @@
   font-variation-settings: 'wght' var(--wght-title);
 }
 
-.card__description {
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  
+}
+
+.card__content-description {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 25px;
   line-height: 21px;
+  
 }
+
+
+.like__buttons {
+  align-self: flex-end;
+  display: flex;
+
+}
+
+.card__icon-button:not(:focus-visible) {
+  border: 2px solid transparent;
+}
+
+.like-icon {
+  inline-size: 35px;
+  block-size: 32px;
+}
+
 
 .buttons {
   border: 2px solid var(--accent-color);
@@ -190,23 +214,25 @@
   color: var(--accent-color);
 }
 
-.like__buttons {
-  display: flex;
-  justify-content: end;
-  padding-inline-end: 25px;
-  padding-block-end: 25px;
-  font-size: 14px;
-  line-height: 12.6px;
+.card__like-button {
+  min-inline-size: 130px;
 }
 
-.card__like-button {
-  inline-size: 130px;
+.card__like-button:focus-visible {
+   
+    box-shadow: 2px 2px var(--accent-color);
+  
 }
 
 .card__icon-button {
-  border: none;
-
+  
+ 
 }
+
+.card__icon-button:focus-visible {
+  
+}
+
 
 /*SAVE*/
 
@@ -253,6 +279,7 @@
   .save {
     margin-block-end: 100px;
   }
+
 }
 
 @supports (
@@ -297,6 +324,8 @@
 .image-herenow {
   filter: hue-rotate(260deg) contrast(1.2);
 }
+
+
 
 /*DIALOGUE*/
 

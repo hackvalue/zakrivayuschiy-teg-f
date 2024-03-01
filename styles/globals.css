@@ -55,8 +55,6 @@ button {
   outline: none;
   color: currentColor;
   font-family: var(--accent-font);
-  font-size: 0.875rem;
-  line-height: 12.6px;
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
