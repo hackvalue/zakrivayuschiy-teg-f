@@ -119,7 +119,7 @@
             src="./images/start.jpg"
             alt="Ноги путника уверенно наступают в лужу на каменистой тропе"
           />
-          <p class="cover__label">&lt;/HTML&gt;</p>
+          <p class="cover__label">&lt;start&gt;</p>
         </div>
         <div class="card__description">
           <p class="card__text">
@@ -178,7 +178,7 @@
             src="./images/doubt.jpg"
             alt="Безграничный пустнный пейзаж с путником на вершине дюны"
           />
-          <p class="cover__label">&lt;/HTML&gt;</p>
+          <p class="cover__label">&lt;doubt&gt;</p>
         </div>
         <div class="card__description">
           <p class="card__text">
@@ -235,7 +235,7 @@
             src="./images/ideal.jpg"
             alt="Человек на взбирается на выступ на фоне отвесных скал"
           />
-          <p class="cover__label">&lt;/HTML&gt;</p>
+          <p class="cover__label">&lt;perfetto: 100%&gt;</p>
         </div>
 
         <div class="card__description">
@@ -295,7 +295,7 @@
             src="./images/hands.jpg"
             alt="Руки зажигают газовую горелку в темноте"
           />
-          <p class="cover__label">&lt;/HTML&gt;</p>
+          <p class="cover__label">&lt;support: always&gt;</p>
         </div>
         <div class="card__description">
           <p class="card__text">
@@ -355,7 +355,7 @@
             src="./images/perspective.jpg"
             alt="Широкая перспектива на пустынный пейзаж с дюнами, продолжающийся рядами гор"
           />
-          <p class="cover__label">&lt;/HTML&gt;</p>
+          <p class="cover__label">&lt;path: any&gt;</p>
         </div>
         <div class="card__description">
           <p class="card__text">
@@ -410,9 +410,9 @@
             class="card__cover-image image-camels"
             loading="lazy"
             src="./images/camels.jpg"
-            alt="Пустынный пейзаж с путником и его караваном верблюдов среди дюн"
+            alt="Пустынный пейзаж с путниками и их караваном верблюдов среди дюн"
           />
-          <p class="cover__label">&lt;/HTML&gt;</p>
+          <p class="cover__label">&lt;no more code: none&gt;</p>
         </div>
         <div class="card__description">
           <p class="card__text">
@@ -471,7 +471,7 @@
             src="./images/herenow.jpg"
             alt="Сумерки в пустыне со светящейся палаткой на фоне гор"
           />
-          <p class="cover__label">&lt;experience&gt;</p>
+          <p class="cover__label">&lt;hello desert&gt;</p>
         </div>
         <div class="card__description">
           <p class="card__text">
@@ -522,38 +522,53 @@
           </button>
         </div>
       </article>
+
+
+
+
+
+      <section class="save">
+        <button
+          class="buttons save__button"
+          type="button"
+          onclick="window['dialog-id'].showModal();"
+          aria-controls="dialog-id"
+        >
+          <svg class="floppy-icon" viewBox="0 0 40 40">
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span> Сохранить на память </span>
+        </button>
+  
+        <div>
+          <dialog class="pop-up-window" id="dialog-id">
+            <div class="popup-window-title">
+              <svg class="floppy-icon" viewBox="0 0 40 40">
+                <use href="./svg/floppy.svg#floppy">
+                </use>
+              </svg>
+              <h3 class="pop-up-title">Вставьте дискету,&nbspчтобы продолжить
+              </h3>
+            </div>
+            
+            <form method="dialog" class="close-form">
+              <button class="buttons close-button animated-button">ок</button>
+            </form>
+          </dialog>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
     </main>
 
-    <section class="save">
-      <button
-        class="buttons save__button"
-        type="button"
-        onclick="window['dialog-id'].showModal();"
-        aria-controls="dialog-id"
-      >
-        <svg class="floppy-icon" viewBox="0 0 40 40">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span> Сохранить на память </span>
-      </button>
-
-      <div>
-        <dialog class="pop-up-window" id="dialog-id">
-          <div class="popup-window-title">
-            <svg class="floppy-icon" viewBox="0 0 40 40">
-              <use href="./svg/floppy.svg#floppy">
-              </use>
-            </svg>
-            <h3 class="pop-up-title">Вставьте дискету,&nbspчтобы продолжить
-            </h3>
-          </div>
-          
-          <form method="dialog" class="close-form">
-            <button class="buttons close-button animated-button">ок</button>
-          </form>
-        </dialog>
-      </div>
-    </section>
+    
 
     <script src="./scripts/like.js"></script>
   </body>

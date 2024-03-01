@@ -195,6 +195,8 @@
   justify-content: end;
   padding-inline-end: 25px;
   padding-block-end: 25px;
+  font-size: 14px;
+  line-height: 12.6px;
 }
 
 .card__like-button {
@@ -203,12 +205,12 @@
 
 .card__icon-button {
   border: none;
+
 }
 
 /*SAVE*/
 
 .save {
-  margin-block-start: 50px;
   margin-block-end: 103px;
 }
 
@@ -247,6 +249,10 @@
     width: 28px;
     height: 28px;
   }
+
+  .save {
+    margin-block-end: 100px;
+  }
 }
 
 @supports (
@@ -265,34 +271,32 @@
 }
 
 .image-start {
-  filter: grayscale(52%);
+  filter: sepia(72%) contrast(260%);
 }
 
 .image-doubt {
-  filter: hue-rotate(10deg);
+  filter: blur(0.15rem);
 }
 
 .image-ideal {
-  filter: blur(0.06rem);
+  filter: saturate(2.2);
 }
 
 .image-hands {
-  filter: hue-rotate(90deg) blur(1px);
+  filter: hue-rotate(275deg) blur(1px);
 }
 
 .image-perspective {
-  filter: hue-rotate(90deg) blur(1px);
+  filter: brightness(0.7);
 }
 
 .image-camels {
-  filter: hue-rotate(90deg) blur(1px);
+  filter: grayscale(95%);
 }
 
 .image-herenow {
-  filter: hue-rotate(90deg) blur(1px);
+  filter: hue-rotate(260deg) contrast(1.2);
 }
-
-
 
 /*DIALOGUE*/
 
@@ -310,15 +314,16 @@
   gap: 30px;
 }
 
+.pop-up-window::backdrop {
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
 .popup-window-title {
   
   display: grid;
   grid-template-columns: 39px min-content;
   place-items: center;
   column-gap: 12px;
-
-  
-  
 }
 
 .pop-up-title {
