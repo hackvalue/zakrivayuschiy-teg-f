@@ -211,22 +211,21 @@
 .button-fill {
   position: relative;
   overflow: hidden;
-  transition: box-shadow .3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .button-fill::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--accent-color);
   transform: translateX(-100%);
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .buttons:hover::before {
   transform: translateX(0%);
 }
-
 
 .card__like-button {
   min-inline-size: 130px;
@@ -243,16 +242,6 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
 }
-
-
-
-
-
-
-
-
-
-
 
 /*SAVE*/
 
@@ -275,6 +264,7 @@
   inline-size: 21px;
   block-size: 21px;
   mix-blend-mode: difference;
+  color: var(--fill-text-color);
 }
 
 @media (width<=375px) {
@@ -389,4 +379,3 @@
   padding: 10px 17px;
   text-transform: uppercase;
 }
-

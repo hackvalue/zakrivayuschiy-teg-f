@@ -12,6 +12,4 @@
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
     --heart-contour: #000000;
     --heart-fill: #f00;
-    --heart-transition: fill .3s linear;
-    --heart-transition-delayed: fill .3s .05s linear;
   }
