@@ -71,6 +71,7 @@
   border: none;
   text-transform: uppercase;
   position: relative;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__list {
@@ -82,7 +83,6 @@
 .theme-menu__button:hover {
   cursor: pointer;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled::before {
@@ -90,12 +90,12 @@
   position: absolute;
   inline-size: 16px;
   inset-inline-start: -16px;
+  inset-block-start: 0;
   animation: active-theme 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:disabled {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 
@@ -107,7 +107,6 @@
 .theme-menu__button:focus-visible {
   outline: none;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -160,6 +159,7 @@
   color: var(--accent-color);
   text-shadow: 1px 1px var(--bg-color);
   opacity: 50%;
+  mix-blend-mode: hard-light;
 }
 
 .card__title {
@@ -186,6 +186,7 @@
 .like__buttons {
   align-self: flex-end;
   display: flex;
+  gap: 2px;
 }
 
 .like-icon {
@@ -208,7 +209,7 @@
 .button-fill {
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  
 }
 
 .button-fill::before {
@@ -228,12 +229,13 @@
   min-inline-size: 130px;
 }
 
-.card__like-button:focus-visible {
+.button-fill:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
 }
 
 .card__icon-button {
   border: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
