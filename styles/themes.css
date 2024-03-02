@@ -20,6 +20,7 @@
     --bg-color: #000000;
     --wght-main: 465;
     --wght-title: 785;
+    --fill-text-color: #00CC14;
     --main-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), 
     repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), 
     linear-gradient(to bottom, #007f0c, #004306);
@@ -32,6 +33,7 @@
         --bg-color: #000000;
         --wght-main: 465;
         --wght-title: 785;
+        --fill-text-color: #00CC14;
         --main-gradient: repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px), 
     repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px), 
     linear-gradient(to bottom, #007f0c, #004306);
