@@ -43,6 +43,11 @@
   }
 }
 
+.like-icon .heart-contour {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear;
+}
+
 .like-icon .heart-core {
   fill: transparent;
   transition: fill 0.3s 0.03s linear;
@@ -75,7 +80,7 @@
 
 .like-icon.is-liked .heart-contour {
   fill: var(--heart-fill);
-  transition: fill 0.3s 0.05s linear;
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .heart-body {
@@ -102,16 +107,3 @@
   animation: heart-sparks 1 0.3s 0.3s ease-in alternate;
   transform-origin: center;
 }
-
-/*
-  @media (prefers-reduced-motion: reduce) {
-    .like-icon.is-liked .heart,
-    .like-icon.is-liked .sparks,
-    .card__image-container:hover .card__image,
-    .card__image-container:hover .tap-icon,
-    .card__image-container:hover .tap-sparks {
-      animation: none;
-    }
-  }
-
-  */
